@@ -5,18 +5,11 @@ import TodoList from './TodoList';
 function App() {
   const [tasks, setTasks] = useState(
     [
-      {
-        id:0,
-        nama:"Cuci Baju",
-      },
-      {
-        id:1,
-        nama:"Masak Nasi",
-      },
+
     ]
   );
   
-  const [countId, setCountId] = useState(1);
+  const [countId, setCountId] = useState(0);
 
   const [task, setTask] = useState("");
 
@@ -73,7 +66,7 @@ function App() {
       <div style={{width:"300px", margin:"auto"}}>
         <label htmlFor="input">Tambah Pekerjaan</label>
         <input placeholder="input" className="validate" onChange={(event) => {handleInput(event)}} value={task}/>
-        <button className="btn-floating btn-large waves-effect waves-light blue" onClick={() => {handleSubmit()}}><i class="material-icons">add</i></button>
+        <button className="btn-floating btn-large waves-effect waves-light blue" onClick={() => {handleSubmit()}}><i className="material-icons">add</i></button>
       </div>
       
       <h2>List Pekerjaan Rumah</h2>
